@@ -1,0 +1,168 @@
+﻿body {
+    background-color: rgb(51,51,51);
+    color: rgb(255,255,255);
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+
+#Login {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 5px;
+    margin-left: 110px;
+    margin-right: 110px;
+    background-color: rgba(155,0,33,0.6);
+}
+
+
+.input {
+    border-radius: 3px;
+    padding: 10px 30px;
+    border: 2px solid;
+    font-size: 140%;
+    color: rgb(0,0,0);
+}
+
+select {
+    border-radius: 3px;
+    border: 2px solid;
+    padding: 10px 30px;
+    font-size: 140%;
+    color: rgb(0,0,0);
+}
+
+.botaoSalvaProduto
+{
+    background-color: rgb(0, 150, 33);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 10px 28px;
+    border-color: rgb(0,0,0);
+    font-size: 125%
+}
+
+.botaoCancelaProduto
+{
+    background-color: rgb(150, 0, 33);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 10px 28px;
+    border-color: rgb(0,0,0);
+    font-size: 125%
+}
+
+.file {
+    border-radius: 3px;
+    border: 2px solid;
+    padding: 10px 25px;
+    color: rgb(0,0,0);
+}
+
+.login {
+    border-radius: 3px;
+    border: 2px solid;
+    padding: 5px 10px;
+    color: rgb(0,0,0);
+}
+
+table, tr, td, th{
+    border:solid 2px;
+    border-color: rgb(0,0,0);
+    color: rgb(0,0,0);
+}
+
+table {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.inicio {
+    color: rgb(255,255,255);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#check {
+    display: none;
+}
+
+.bibi-list {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.barra {
+    background-color: rgb(150, 0, 33);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: Arial;
+    font-size: 14pt;
+    color: rgb(255,255,255);
+    border-bottom: 4px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.link:hover {
+    background-color: rgb(170,0,33);
+}
+
+#check:checked ~ .barra {
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.sobre {
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(0,0,0);
+    border-radius: 2%;
+    background-color: rgb(150, 0, 33);
+}
+
+.btn-group > .btn:first-child {
+    background-color: #494950;
+}
