@@ -165,4 +165,22 @@ a {
 
 .btn-group > .btn:first-child {
     background-color: #494950;
+    padding: 20px;
+    font-family: Arial;
+    font-size: 14pt;
+    color: rgb(255,255,255);
+    border-bottom: 4px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+    width:300px;
+    border-radius:0px;
+}
+
+#check:checked ~ .barra nav .btn-group > .btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+}
+
+.barra nav .btn-group > .btn:first-child:hover {
+    background-color: rgb(170,0,33);
 }
