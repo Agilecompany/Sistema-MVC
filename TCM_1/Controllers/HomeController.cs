@@ -62,5 +62,15 @@ namespace TCM_1.Controllers
         {
             return View();
         }
+
+        public ActionResult Fornecedor()
+        {
+            return View();
+        }
+
+        public ActionResult CadastroForn()
+        {
+            return View();
+        }
     }
 }
