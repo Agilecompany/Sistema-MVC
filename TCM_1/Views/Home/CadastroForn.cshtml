@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "CadastroForn";
+}
+
+<h3>CADASTRO DE FORNECEDOR</h3>
+
+<script>
+    function cpf() {
+        var mask = document.getElementById("cpf");
+        if (mask.value.length == 3 || mask.value.length == 7) {
+            mask.value += "."
+        }
+        else if (mask.value.length == 11) {
+            mask.value += "-"
+        }
+    }
+</script>
+
+
+<form id="cadastro">
+    <fieldset>
+        <legend class="inicio">Insira os dados do fornecedor para efetuar o cadastro:</legend>
+    </fieldset>
+
+    <div>
+        <label>NOME</label>
+        <br />
+        <input class="input" type="text" placeholder="Nome" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>E-MAIL</label>
+        <br />
+        <input class="input" type="text" placeholder="Email" autocomplete="off" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>ENDEREÇO</label>
+        <br />
+        <input class="input" type="tel" placeholder="Endereço" autocomplete="off" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>CNPJ</label>
+        <br />
+        <input class="input" id="cpf" type="text" autocomplete="off" placeholder="CNPJ" maxlength="14" onclick="cpf()" />
+        <br />
+        <br />
+    </div>
+    
+
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+
+    <br />
+    <br />
+
+</form>
