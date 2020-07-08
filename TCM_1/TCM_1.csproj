@@ -173,6 +173,7 @@
     <Content Include="Views\Home\EditCliente.cshtml" />
     <Content Include="Views\Home\Produtos.cshtml" />
     <Content Include="Views\Home\Sobre.cshtml" />
+    <Content Include="Views\Home\Funcionario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

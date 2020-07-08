@@ -57,5 +57,10 @@ namespace TCM_1.Controllers
         {
             return View();
         }
+
+        public ActionResult Funcionario()
+        {
+            return View();
+        }
     }
 }
