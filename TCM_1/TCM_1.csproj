@@ -176,6 +176,8 @@
     <Content Include="Views\Home\Funcionario.cshtml" />
     <Content Include="Views\Home\Fornecedor.cshtml" />
     <Content Include="Views\Home\CadastroForn.cshtml" />
+    <Content Include="Views\Home\CadastroUsu.cshtml" />
+    <Content Include="Views\Home\Usuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,80 +5,7 @@
 
 <h2>PAGAMENTO</h2>
 
-<div>
-    <table>
-        <tr>
-            <th><b>Produto</b></th>
-            <th><b>Categoria</b></th>
-            <th><b>Quantidade</b></th>
-            <th><b>Preço</b></th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-        <tr>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>a</td>
-            <td>
-                <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
-                <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
-            </td>
-        </tr>
-    </table>
-</div>
 
-<br />
-<br />
 
 <div>
     <form id="pagamento">
@@ -107,7 +34,7 @@
 
         <label>CPF DO CLIENTE</label>
         <br />
-        <input class="input" type="text" placeholder="CPF" />
+        <input class="input" type="text" placeholder="CPF" autocomplete="off" />
 
         <br />
         <br />
@@ -119,10 +46,114 @@
         <br />
         <br />
 
+        <label>NOME DO VENDEDOR</label>
+        <br />
+        <input class="input" type="text" placeholder="Vendedor" />
+
+        <br />
+        <br />
+
+        <label>VALOR RECEBIDO</label>
+        <br />
+        <input class="input" type="text" placeholder="Valor Recebido" autocomplete="off" />
+
+        <br />
+        <br />
+
+        <label>TROCO</label>
+        <br />
+        <input class="input" type="text" placeholder="Troco" autocomplete="off" />
+
+        <br />
+        <br />
+
         <label>VALOR TOTAL</label>
         <br />
         <input class="input" type="text" readonly placeholder="Total" />
+
+        <br />
+        <br />
+
+        <input class="botaoSalvaProduto" type="submit" value="Confirmar Venda" />&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+
+        <br />
+        <br />
     </form>
 
+    <div>
+        <table>
+            <tr>
+                <th><b>&nbsp;&nbsp;&nbsp;Produto&nbsp;&nbsp;&nbsp;</b></th>
+                <th><b>&nbsp;&nbsp;&nbsp;Categoria&nbsp;&nbsp;&nbsp;</b></th>
+                <th><b>&nbsp;&nbsp;&nbsp;Quantidade&nbsp;&nbsp;&nbsp;</b></th>
+                <th><b>&nbsp;&nbsp;&nbsp;Preço&nbsp;&nbsp;&nbsp;</b></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>a</td>
+                <td>
+                    <button class="btn btn-danger delete"><i class="glyphicon glyphicon-trash">EXCLUIR</i></button>
+                    <button class="btn btn-primary edit"><i class="glyphicon glyphicon-edit">EDITAR</i></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <br />
+    <br />
 
 </div>
