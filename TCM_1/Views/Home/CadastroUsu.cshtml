@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "CadastroUsu";
+}
+
+<h2>CADASTRO DE USUÁRIO</h2>
+
+<form id="cadastro">
+    <fieldset>
+        <legend class="inicio">Insira seus dados para efetuar o cadastro:</legend>
+    </fieldset>
+
+    <div>
+        <label>NOME</label>
+        <br />
+        <input class="input" type="text" placeholder="Nome" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>LOGIN</label>
+        <br />
+        <input class="input" type="text" placeholder="Login" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>E-MAIL</label>
+        <br />
+        <input class="input" type="text" placeholder="E-mail" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>SENHA</label>
+        <br />
+        <input class="input" type="password" placeholder="Senha" />
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>CONFIRME A SENHA</label>
+        <br />
+        <input class="input" type="password" placeholder="Confirme a senha" />
+        <br />
+        <br />
+    </div>
+
+    <label>CARGO</label>
+    <br />
+    <select>
+        <option>Caixa</option>
+        <option>Administrativo</option>
+    </select>
+
+    <br />
+
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+
+    <br />
+    <br />
+
+    <a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>
+
+</form>
+

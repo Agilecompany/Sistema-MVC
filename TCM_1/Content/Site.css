@@ -108,7 +108,7 @@ table {
 .bibi-list {
     cursor: pointer;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     z-index: 1;
 }
 
@@ -116,7 +116,7 @@ table {
     background-color: rgb(113, 20, 40);
     height: 100%;
     width: 300px;
-    position: absolute;
+    position: fixed;
     transition: all .2s linear;
     left: -300px;
 }
@@ -184,4 +184,37 @@ a {
 
 .barra nav .btn-group > .btn:first-child:hover {
     background-color: rgb(170,0,33);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #494950;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+a{
+    color:rgb(255,255,255);
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(255,255,255);
 }

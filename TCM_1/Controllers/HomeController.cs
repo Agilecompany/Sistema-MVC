@@ -81,5 +81,15 @@ namespace TCM_1.Controllers
         {
             return View();
         }
+
+        public ActionResult CadastroUsu()
+        {
+            return View();
+        }
+
+        public ActionResult Usuario()
+        {
+            return View();
+        }
     }
 }
