@@ -1,0 +1,1 @@
+﻿SELECT * FROM Client WHERE ID = @ID and Excluded = 0;

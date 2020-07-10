@@ -1,0 +1,1 @@
+﻿SELECT ID, Name, Email, Login, Password, Profile FROM `User` WHERE ID = @ID and Excluded = 0; 

@@ -1,0 +1,1 @@
+﻿DELETE FROM Sale WHERE id = @ID;

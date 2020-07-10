@@ -1,0 +1,1 @@
+﻿SELECT * FROM Salesman WHERE ID = @ID AND Excluded = 0;

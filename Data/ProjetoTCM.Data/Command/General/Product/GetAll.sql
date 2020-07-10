@@ -1,0 +1,1 @@
+﻿SELECT * from product where Excluded = 0;

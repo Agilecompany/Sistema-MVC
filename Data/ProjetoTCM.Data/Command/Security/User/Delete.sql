@@ -1,0 +1,1 @@
+﻿UPDATE `User` SET Excluded = 1 WHERE id = @ID;

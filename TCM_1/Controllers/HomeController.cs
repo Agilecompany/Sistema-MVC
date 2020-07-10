@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using ProjetoTCM.Business.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,6 +28,13 @@ namespace TCM_1.Controllers
         public ActionResult Login()
         {
             return View();
+        }
+
+        public ActionResult LoginEnter(string login, string password)
+        {
+            var result = new UserBusiness().Authentication(login, password);
+
+            return View(result);
         }
 
         public ActionResult CadastroProdutos()

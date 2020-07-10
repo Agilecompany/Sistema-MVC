@@ -1,0 +1,6 @@
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\bin\Debug\ProjetoTCM.Domain.dll
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\bin\Debug\ProjetoTCM.Domain.pdb
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.csprojAssemblyReference.cache
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.csproj.CoreCompileInputs.cache
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.dll
+C:\Users\milen\source\repos\ProjetoTCM1\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.pdb

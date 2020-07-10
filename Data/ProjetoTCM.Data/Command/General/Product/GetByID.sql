@@ -1,0 +1,1 @@
+﻿SELECT * FROM product WHERE ID = @ID and Excluded = 0;
