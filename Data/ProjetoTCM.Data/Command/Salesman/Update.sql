@@ -1,2 +1,2 @@
-﻿UPDATE General.[Salesman] SET Name = @Name, CPF = @CPF,Address= @Address, Sex = @Sex, Email =@Email, Phone = @Phone, Excluded = @Excluded
+﻿UPDATE General.[Salesman] SET Name = @Name, CPF = @CPF,Address= @Address, Phone = @Phone,Email =@Email, Sex = @Sex,  Excluded = @Excluded
 where id = @ID

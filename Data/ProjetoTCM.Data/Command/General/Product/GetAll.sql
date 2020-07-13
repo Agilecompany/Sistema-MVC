@@ -1,1 +1,1 @@
-﻿SELECT * from product where Excluded = 0;
+﻿SELECT * from Product where Excluded = 0;

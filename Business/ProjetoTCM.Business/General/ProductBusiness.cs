@@ -19,7 +19,7 @@ namespace ProjetoTCM.Business.General
             var result = new ObjectReply<ProductDomain>();
             try
             {
-                if (string.IsNullOrWhiteSpace(product.ExternalCode))
+                  if (string.IsNullOrWhiteSpace(product.ExternalCode))
                 {
                     result.Reply = EnumReply.BusinessError;
                     result.Message = MessageResource.Product_ExternalCode_Required;
