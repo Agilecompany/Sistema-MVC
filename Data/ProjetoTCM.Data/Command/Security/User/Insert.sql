@@ -1,6 +1,6 @@
 ﻿-- Insert
 INSERT INTO `User`
-(Name, Email, Login, Password, Profile) 
+(Name, Login, Email,Password, Profile,Excluded) 
 VALUES 
-(@Name, @Email, @Login, @Password, @Profile);
+(@Name, @Login,@Email, @Password, @Profile, 0);
 select LAST_INSERT_ID();

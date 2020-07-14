@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoTCM.Data.Data.General
 {
-    public class ProductData: BaseData
+    public class ProductData : BaseData
     {
         public ProductDomain Save(ProductDomain product)
         {
@@ -89,17 +89,27 @@ namespace ProjetoTCM.Data.Data.General
 
         private ProductDomain MountProductDomain(MySqlDataReader reader)
         {
-            //[ID],[ExternalCode] ,[Name]  ,[Description],[Brand],[Model],[Price],[UnitPrice]
-            ProductDomain product = new ProductDomain();
-            product.ID = (long)reader[0];
-            product.ExternalCode = (string)reader[1];
-            product.Name = (string)reader[2];
-            product.Description = (string)reader[3];
-            product.Brand = (string)reader[4];
-            product.Model = (string)reader[5];
-            product.UnitPrice = (decimal)reader[6];
+            try
+            {
+                //[ID],[ExternalCode] ,[Name]  ,[Description],[Brand],[Model],[Price],[UnitPrice]
+                ProductDomain product = new ProductDomain();
+                product.ID = (long)reader[0];
+                product.Name = (string)reader[1];
+                product.Description = (string)reader[2];
+                product.Brand = (string)reader[3];
+                product.Model = (string)reader[4];
+                product.UnitPrice = (decimal)reader[5];
+                product.ExternalCode = (string)reader[7];
+           
 
-            return product;
+                return product;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
         }
 
         public bool Delete(long id)
@@ -118,6 +128,6 @@ namespace ProjetoTCM.Data.Data.General
             return resultado;
         }
 
-       
+
     }
 }

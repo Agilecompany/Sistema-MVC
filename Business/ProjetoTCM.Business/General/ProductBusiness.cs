@@ -76,7 +76,7 @@ namespace ProjetoTCM.Business.General
             {
                 result.Entity = new ProductData().GetAll();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 result.Reply = EnumReply.SystemError;
                 result.Message = MessageResource.SystemError;
