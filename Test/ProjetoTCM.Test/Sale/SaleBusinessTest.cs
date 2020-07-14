@@ -42,7 +42,7 @@ namespace ProjetoTCM.Test.Sale
             var salesman = new SalesmanDomain() { Email = "teste@gmail.", Name = "Sr Teste", Address = "rua 2", CPF = "35.659.698.510", Phone = "2944-3956" };
             new SalesmanBusiness().Save(salesman);
 
-            var client = new ClientDomain() { Email = "teste@gmail", Name = "Sr Teste", CPF = "3295.459.678.20", Phone = "2944-3956" };
+            var client = new ClientDomain() { Email = "teste@gmail", Name = "Sr Teste", CPF = "325.459.678.20", Phone = "2944-3956" };
             new ClientBusiness().Save(client);
 
             var user = new UserDomain() { Login = "tes", Password = "123456", Email = "teste@gmail.c", Name = "Sr Teste", Profile = EnumProfile.Cashier };
