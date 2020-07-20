@@ -14,3 +14,11 @@ C:\Users\milen\Documents\GitHub\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Inf
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.csproj.CoreCompileInputs.cache
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.dll
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.pdb
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\bin\Debug\ProjetoTCM.Infrastructure.Common.dll
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\bin\Debug\ProjetoTCM.Infrastructure.Common.pdb
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.csprojAssemblyReference.cache
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.Message.MessageResource.resources
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.csproj.GenerateResource.cache
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.csproj.CoreCompileInputs.cache
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.dll
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Infrastructure.Common\ProjetoTCM.Infrastructure.Common\obj\Debug\ProjetoTCM.Infrastructure.Common.pdb

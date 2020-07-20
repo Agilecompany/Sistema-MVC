@@ -15,10 +15,7 @@ namespace TCM_1.Controllers
             return View();
         }
 
-        public ActionResult CadastroCliente()
-        {
-            return View();
-        }
+        
 
         public ActionResult CadastroFunc()
         {

@@ -10,3 +10,9 @@ C:\Users\milen\Documents\GitHub\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\P
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.csproj.CoreCompileInputs.cache
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.dll
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.pdb
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\bin\Debug\ProjetoTCM.Domain.dll
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\bin\Debug\ProjetoTCM.Domain.pdb
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.csprojAssemblyReference.cache
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.csproj.CoreCompileInputs.cache
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.dll
+D:\Apps\Aulas\TCM_1\Sistema-MVC\Domain\ProjetoTCM.Domain\obj\Debug\ProjetoTCM.Domain.pdb
