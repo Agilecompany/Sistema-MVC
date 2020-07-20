@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="General\ClientBusinessTest.cs" />
     <Compile Include="General\ProductBusinessTest.cs" />
+    <Compile Include="General\ProviderBusinessTest.cs" />
     <Compile Include="General\SalesmanBusinessTest.cs" />
     <Compile Include="Sale\SaleBusinessTest.cs" />
     <Compile Include="Security\UserBusinessTest.cs" />

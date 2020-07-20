@@ -61,7 +61,7 @@ namespace ProjetoTCM.Data.Command.General.Product {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE Product.[Product] SET Excluded = 1 where id = @ID.
+        ///   Looks up a localized string similar to UPDATE product SET Excluded = 1 WHERE id = @ID;.
         /// </summary>
         internal static string Delete {
             get {
@@ -70,7 +70,7 @@ namespace ProjetoTCM.Data.Command.General.Product {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT ID, ExternalCode, Name, Description, Brand, Model,Price,UnitPrice,Excluded, Profile from Product.[Product] where Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * from Product where Excluded = 0;.
         /// </summary>
         internal static string GetAll {
             get {
@@ -79,7 +79,7 @@ namespace ProjetoTCM.Data.Command.General.Product {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT ID, ExternalCode, Name, Description, Brand, Model,Price,UnitPrice,Excluded, Profile from Product.[Product] WHERE ID = @ID and Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * FROM Product WHERE ID = @ID and Excluded = 0;.
         /// </summary>
         internal static string GetByID {
             get {
@@ -88,9 +88,12 @@ namespace ProjetoTCM.Data.Command.General.Product {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO General.[Product](ID, ExternalCode, Name, Description, Brand, Model,Price,UnitPrice,Excluded) 
-        ///VALUES (@ID, @ExternalCode, @Name, @Description, @Brand, @Model,@Price,@UnitPrice,@Excluded);
-        ///SELECT SCOPE_IDENTITY();.
+        ///   Looks up a localized string similar to INSERT INTO Product
+        ///(Name,Description,Brand,Model,UnitPrice,Excluded, ExternalCode)
+        ///VALUES 
+        ///(@Name,@Description,@Brand,@Model,@UnitPrice, @Excluded, @ExternalCode);
+        ///select LAST_INSERT_ID();
+        ///.
         /// </summary>
         internal static string Insert {
             get {
@@ -99,8 +102,9 @@ namespace ProjetoTCM.Data.Command.General.Product {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE General.[Client] SET ID = @ID, ExternalCode = @ExternalCode, Name = @Name, Description = @Description, Brand = @Brand, Model = @Model, Price = @Price, UnitPrice = @UnitPrice, Excluded = @Excluded
-        ///where id = @ID
+        ///   Looks up a localized string similar to UPDATE Product
+        ///SET  ExternalCode = @ExternalCode, Name=@Name, Description=@Description, Brand=@Brand, Model=@Model, UnitPrice=@UnitPrice, Excluded=@Excluded
+        ///WHERE id = @ID;
         ///
         ///.
         /// </summary>

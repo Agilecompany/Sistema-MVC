@@ -61,7 +61,7 @@ namespace ProjetoTCM.Data.Command.Sale.Sale {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE Sale.[Sale] SET Excluded = 1 where id = @ID.
+        ///   Looks up a localized string similar to DELETE FROM Sale WHERE id = @ID;.
         /// </summary>
         internal static string Delete {
             get {
@@ -70,7 +70,7 @@ namespace ProjetoTCM.Data.Command.Sale.Sale {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Payment, Date, SalesmanID, ClientID, UserID, ClientName, ClientCPF, SalesmanName,  Excluded from Sale.[Sale] where Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * from Sale;.
         /// </summary>
         internal static string GetAll {
             get {
@@ -79,7 +79,7 @@ namespace ProjetoTCM.Data.Command.Sale.Sale {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT Payment, Date, SalesmanID, ClientID, UserID, ClientName, ClientCPF, SalesmanName, Excluded from Sale.[Sale] WHERE ID = @ID and Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * from Sale WHERE ID = @ID;.
         /// </summary>
         internal static string GetByID {
             get {
@@ -88,9 +88,10 @@ namespace ProjetoTCM.Data.Command.Sale.Sale {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Sale.[Sale]( Payment,Date, SalesmanID,ClientID, UserID,ClientName, ClientCPF, SalesmanName,Excluded) 
-        ///VALUES (@Payment, @Date, @SalesmanID, @ClientID, @UserID,@ClientName, @ClientCPF, @SalesmanName, @Excluded);
-        ///SELECT SCOPE_IDENTITY();.
+        ///   Looks up a localized string similar to INSERT INTO Sale
+        ///VALUES 
+        ///(default,@SalesmanID, @Payment, @Date, @Excluded, @ClientID, @UserID, @ClientName, @ClientCPF, @SalesmanName);
+        ///select LAST_INSERT_ID();.
         /// </summary>
         internal static string Insert {
             get {

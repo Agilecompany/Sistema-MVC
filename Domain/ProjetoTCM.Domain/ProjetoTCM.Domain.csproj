@@ -46,6 +46,7 @@
     <Compile Include="Enum\EnumSex.cs" />
     <Compile Include="General\ClientDomain.cs" />
     <Compile Include="General\ProductDomain.cs" />
+    <Compile Include="General\ProviderDomain.cs" />
     <Compile Include="General\SalesmanDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale\SaleDomain.cs" />

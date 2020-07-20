@@ -79,7 +79,7 @@ namespace ProjetoTCM.Data.Command.Security.User {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT ID, Name, Email, Login, Password, Profile FROM `User` WHERE ID = @ID and Excluded = 0;.
+        ///   Looks up a localized string similar to SELECT ID, Name, Email, Login, Password, Profile FROM `User` WHERE ID = @ID and Excluded = 0; .
         /// </summary>
         internal static string GetByID {
             get {
@@ -100,9 +100,9 @@ namespace ProjetoTCM.Data.Command.Security.User {
         /// <summary>
         ///   Looks up a localized string similar to -- Insert
         ///INSERT INTO `User`
-        ///(Name, Email, Login, Password, Profile) 
+        ///(Name, Login, Email,Password, Profile,Excluded) 
         ///VALUES 
-        ///(@Name, @Email, @Login, @Password, @Profile);
+        ///(@Name, @Login,@Email, @Password, @Profile, 0);
         ///select LAST_INSERT_ID();.
         /// </summary>
         internal static string Insert {

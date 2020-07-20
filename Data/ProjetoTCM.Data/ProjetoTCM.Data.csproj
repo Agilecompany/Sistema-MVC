@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Command\General\Provider\ProviderResource.Designer.cs">
+      <DependentUpon>ProviderResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Command\Salesman\SalesmanResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,6 +127,7 @@
     <Compile Include="Data\Base\BaseData.cs" />
     <Compile Include="Data\General\ClientData.cs" />
     <Compile Include="Data\General\ProductData.cs" />
+    <Compile Include="Data\General\ProviderData.cs" />
     <Compile Include="Data\General\SalesmanData.cs" />
     <Compile Include="Data\Sale\SaleData.cs" />
     <Compile Include="Data\Sale\SaleProductData.cs" />
@@ -142,6 +148,10 @@
     <EmbeddedResource Include="Command\General\Product\ProductResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProductResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Command\General\Provider\ProviderResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProviderResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Command\Salesman\SalesmanResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -171,6 +181,11 @@
     <Content Include="Command\General\Product\GetByID.sql" />
     <Content Include="Command\General\Product\Insert.sql" />
     <Content Include="Command\General\Product\Update.sql" />
+    <Content Include="Command\General\Provider\Delete.sql" />
+    <Content Include="Command\General\Provider\GetAll.sql" />
+    <Content Include="Command\General\Provider\GetByID.sql" />
+    <Content Include="Command\General\Provider\Insert.sql" />
+    <Content Include="Command\General\Provider\Update.sql" />
     <Content Include="Command\Salesman\Delete.sql" />
     <Content Include="Command\Salesman\GetAll.sql" />
     <Content Include="Command\Salesman\GetByID.sql" />
@@ -202,5 +217,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

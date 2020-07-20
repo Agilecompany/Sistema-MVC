@@ -162,6 +162,18 @@
   <data name="product_UnitPrice_Required" xml:space="preserve">
     <value>O campo valor unitário é obrigatório</value>
   </data>
+  <data name="Provider_CNPJ_Duplicate" xml:space="preserve">
+    <value>O campo CNPJ já foi utilizado para outro usuário</value>
+  </data>
+  <data name="Provider_CNPJ_Required" xml:space="preserve">
+    <value>O campo CNPJ é obrigatório</value>
+  </data>
+  <data name="Provider_Email_Duplicate" xml:space="preserve">
+    <value>O campo e-mail já foi utilizado para outro vendedor</value>
+  </data>
+  <data name="Provider_Name_Required" xml:space="preserve">
+    <value>O Campo Nome é obrigatório</value>
+  </data>
   <data name="SaleProduct_Quantity_Required" xml:space="preserve">
     <value>O campo Quantidade é obrigatório</value>
   </data>

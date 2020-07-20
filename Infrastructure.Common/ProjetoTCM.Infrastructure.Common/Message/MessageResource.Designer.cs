@@ -196,6 +196,42 @@ namespace ProjetoTCM.Infrastructure.Common.Message {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O campo CNPJ já foi utilizado para outro usuário.
+        /// </summary>
+        public static string Provider_CNPJ_Duplicate {
+            get {
+                return ResourceManager.GetString("Provider_CNPJ_Duplicate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo CNPJ é obrigatório.
+        /// </summary>
+        public static string Provider_CNPJ_Required {
+            get {
+                return ResourceManager.GetString("Provider_CNPJ_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo e-mail já foi utilizado para outro vendedor.
+        /// </summary>
+        public static string Provider_Email_Duplicate {
+            get {
+                return ResourceManager.GetString("Provider_Email_Duplicate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O Campo Nome é obrigatório.
+        /// </summary>
+        public static string Provider_Name_Required {
+            get {
+                return ResourceManager.GetString("Provider_Name_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string Sale_Payment_Duplicate {

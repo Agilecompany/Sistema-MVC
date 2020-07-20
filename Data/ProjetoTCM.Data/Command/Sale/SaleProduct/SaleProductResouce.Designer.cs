@@ -61,7 +61,7 @@ namespace ProjetoTCM.Data.Command.Sale.SaleProduct {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UPDATE Sale.[SaleProduct] SET Excluded = 1 where id = @ID.
+        ///   Looks up a localized string similar to DELETE FROM SaleProduct WHERE ID = @ID;.
         /// </summary>
         public static string Delete {
             get {
@@ -70,7 +70,7 @@ namespace ProjetoTCM.Data.Command.Sale.SaleProduct {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT SaleID, ProductID, ExternalCode, UnitPrice,Quantity, ProductName,ClientName,ClientCPF,SalesmanName from Sale.[SaleProduct] where Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * FROM SaleProduct;.
         /// </summary>
         public static string GetAll {
             get {
@@ -79,7 +79,7 @@ namespace ProjetoTCM.Data.Command.Sale.SaleProduct {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SELECT SaleID, ProductID, ExternalCode, UnitPrice, Quantity, ProductName, ClientName,ClientCPF,SalesmanName from Sale.[Sale] WHERE ID = @ID and Excluded = 0.
+        ///   Looks up a localized string similar to SELECT * FROM SaleProduct WHERE ID = @ID;.
         /// </summary>
         public static string GetByID {
             get {
@@ -88,9 +88,11 @@ namespace ProjetoTCM.Data.Command.Sale.SaleProduct {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to INSERT INTO Sale.[SaleProduct]( SaleID, ProductID,ExternalCode, UnitPrice, Quantity,ProductName,ClientName, ClientCPF,SalesmanName ) 
-        ///VALUES (@SaleIDt, @ProductID, @ExternalCode, @UnitPrice, @Quantity, @ProductName, @ClientName,@ClientCPF, @SalesmanName);
-        ///SELECT SCOPE_IDENTITY();
+        ///   Looks up a localized string similar to INSERT INTO SaleProduct
+        ///(SaleID, ProductID, UnitPrice, Quantity, ProductName, ExternalCode) 
+        ///VALUES 
+        ///(@SaleID, @ProductID, @UnitPricet, @Quantity, @ProductName, @ExternalCode);
+        ///select LAST_INSERT_ID();
         ///
         ///.
         /// </summary>

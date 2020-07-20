@@ -1,1 +1,1 @@
-﻿UPDATE Client SET Excluded = 1 WHERE id = @ID;
+﻿UPDATE Client SET Excluded = 1 WHERE ID = @ID;

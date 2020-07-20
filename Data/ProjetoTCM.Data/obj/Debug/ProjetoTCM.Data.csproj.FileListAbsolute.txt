@@ -150,3 +150,4 @@ C:\Users\milen\Documents\GitHub\Sistema-MVC\Data\ProjetoTCM.Data\bin\Debug\Syste
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Data\ProjetoTCM.Data\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Data\ProjetoTCM.Data\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\milen\Documents\GitHub\Sistema-MVC\Data\ProjetoTCM.Data\obj\Debug\ProjetoTCM.Data.csproj.CopyComplete
+C:\Users\milen\Documents\GitHub\Sistema-MVC\Data\ProjetoTCM.Data\obj\Debug\ProjetoTCM.Data.Command.General.Provider.ProviderResource.resources
