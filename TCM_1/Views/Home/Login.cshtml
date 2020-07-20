@@ -1,9 +1,11 @@
 ﻿
-@{
-    ViewBag.Title = "Login";
-}
+@{ ViewBag.Title = "Login"; }
+
+
 
 <h2><b>SEJA BEM-VINDO</b></h2>
+
+
 
 <center>
     @using (Html.BeginForm("LoginEnter", "Home", FormMethod.Post))
@@ -17,10 +19,12 @@
                     <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg> LOGIN
             </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input class="login" type="text" name="login" id="Login" />
+            <input class="login" type="text" name="login" />
             <br />
             <br />
         </div>
+
+
 
         <div>
             <label>
@@ -28,14 +32,16 @@
                     <path d="M2.5 9a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9z" />
                     <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
                 </svg> SENHA
-            </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input class="login" type="password" name="password" id="password" />
             <br />
             <br />
             <br />
+            <input type="submit" id="botaoConfirmaLogin" value="Entrar" />
         </div>
-        <input type="submit" value="Entrar" />
 
-        <a href="~/Home/CadastroFunc">Ainda não tem login? Cadastre-se!</a>
-    }
+
+
+
+        <a href="~/Home/CadastroFunc">Ainda não tem login? Cadastre-se!</a>}
 </center>
