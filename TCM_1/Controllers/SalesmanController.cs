@@ -6,9 +6,14 @@ using System.Web.Mvc;
 
 namespace TCM_1.Controllers
 {
-    public class PagamentoController : Controller
+    public class SalesmanController : Controller
     {
-        public ActionResult Pagamento()
+        public ActionResult CadastroFunc()
+        {
+            return View();
+        }
+
+        public ActionResult Funcionario()
         {
             return View();
         }

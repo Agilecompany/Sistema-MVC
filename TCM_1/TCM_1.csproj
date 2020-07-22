@@ -165,13 +165,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\FornController.cs" />
-    <Compile Include="Controllers\FuncController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\ProviderController.cs" />
+    <Compile Include="Controllers\SalesmanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PagamentoController.cs" />
-    <Compile Include="Controllers\ProdutoController.cs" />
-    <Compile Include="Controllers\UsuController.cs" />
+    <Compile Include="Controllers\SaleController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,20 +224,20 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Cliente\CadastroCliente.cshtml" />
+    <Content Include="Views\Client\CadastroCliente.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Produto\CadastroProdutos.cshtml" />
-    <Content Include="Views\Func\CadastroFunc.cshtml" />
-    <Content Include="Views\Pagamento\Pagamento.cshtml" />
-    <Content Include="Views\Cliente\Cliente.cshtml" />
-    <Content Include="Views\Cliente\EditCliente.cshtml" />
-    <Content Include="Views\Produto\Produtos.cshtml" />
+    <Content Include="Views\Product\CadastroProdutos.cshtml" />
+    <Content Include="Views\Salesman\CadastroFunc.cshtml" />
+    <Content Include="Views\Sale\Pagamento.cshtml" />
+    <Content Include="Views\Client\Cliente.cshtml" />
+    <Content Include="Views\Client\EditCliente.cshtml" />
+    <Content Include="Views\Product\Produtos.cshtml" />
     <Content Include="Views\Home\Sobre.cshtml" />
-    <Content Include="Views\Func\Funcionario.cshtml" />
-    <Content Include="Views\Forn\Fornecedor.cshtml" />
-    <Content Include="Views\Forn\CadastroForn.cshtml" />
-    <Content Include="Views\Usu\CadastroUsu.cshtml" />
-    <Content Include="Views\Usu\Usuario.cshtml" />
+    <Content Include="Views\Salesman\Funcionario.cshtml" />
+    <Content Include="Views\Provider\Fornecedor.cshtml" />
+    <Content Include="Views\Provider\CadastroForn.cshtml" />
+    <Content Include="Views\User\CadastroUsu.cshtml" />
+    <Content Include="Views\User\Usuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

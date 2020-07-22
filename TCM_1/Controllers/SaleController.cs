@@ -6,14 +6,9 @@ using System.Web.Mvc;
 
 namespace TCM_1.Controllers
 {
-    public class ProdutoController : Controller
+    public class SaleController : Controller
     {
-        public ActionResult CadastroProdutos()
-        {
-            return View();
-        }
-
-        public ActionResult Produtos()
+        public ActionResult Pagamento()
         {
             return View();
         }
