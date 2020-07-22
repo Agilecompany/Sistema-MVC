@@ -25,10 +25,11 @@ namespace TCM_1.Controllers
             if (result.Reply == EnumReply.Success)
             {
                 Session["UserCredential"] = new UserCredentialModel() { Login = loginModel.Login };
-                //Session["UserCredential"] = null;
-            }
 
-            return View(result);
+                return View(result);
+            }
+            return View("Login",result);
+
         }
 
         public ActionResult Logoff()
