@@ -166,7 +166,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FornController.cs" />
+    <Compile Include="Controllers\FuncController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PagamentoController.cs" />
+    <Compile Include="Controllers\ProdutoController.cs" />
+    <Compile Include="Controllers\UsuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -221,18 +226,18 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Cliente\CadastroCliente.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\CadastroProdutos.cshtml" />
-    <Content Include="Views\Home\CadastroFunc.cshtml" />
-    <Content Include="Views\Home\Pagamento.cshtml" />
-    <Content Include="Views\Home\Cliente.cshtml" />
-    <Content Include="Views\Home\EditCliente.cshtml" />
-    <Content Include="Views\Home\Produtos.cshtml" />
+    <Content Include="Views\Produto\CadastroProdutos.cshtml" />
+    <Content Include="Views\Func\CadastroFunc.cshtml" />
+    <Content Include="Views\Pagamento\Pagamento.cshtml" />
+    <Content Include="Views\Cliente\Cliente.cshtml" />
+    <Content Include="Views\Cliente\EditCliente.cshtml" />
+    <Content Include="Views\Produto\Produtos.cshtml" />
     <Content Include="Views\Home\Sobre.cshtml" />
-    <Content Include="Views\Home\Funcionario.cshtml" />
-    <Content Include="Views\Home\Fornecedor.cshtml" />
-    <Content Include="Views\Home\CadastroForn.cshtml" />
-    <Content Include="Views\Home\CadastroUsu.cshtml" />
-    <Content Include="Views\Home\Usuario.cshtml" />
+    <Content Include="Views\Func\Funcionario.cshtml" />
+    <Content Include="Views\Forn\Fornecedor.cshtml" />
+    <Content Include="Views\Forn\CadastroForn.cshtml" />
+    <Content Include="Views\Usu\CadastroUsu.cshtml" />
+    <Content Include="Views\Usu\Usuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,19 +6,14 @@ using System.Web.Mvc;
 
 namespace TCM_1.Controllers
 {
-    public class ClienteController : Controller
+    public class ProdutoController : Controller
     {
-        public ActionResult CadastroCliente()
+        public ActionResult CadastroProdutos()
         {
             return View();
         }
 
-        public ActionResult Cliente()
-        {
-            return View();
-        }
-
-        public ActionResult EditCliente()
+        public ActionResult Produtos()
         {
             return View();
         }
