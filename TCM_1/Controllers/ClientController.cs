@@ -18,9 +18,5 @@ namespace TCM_1.Controllers
             return View();
         }
 
-        public ActionResult EditCliente()
-        {
-            return View();
-        }
     }
 }

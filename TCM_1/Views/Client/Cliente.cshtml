@@ -3,21 +3,22 @@
 
 <h2>CLIENTES</h2>
 
-<a href="~/Cliente/CadastroCliente"> <button class="btn btn-success create">  Criar Novo Cliente  <i class="glyphicon glyphicon-open"></i></button> </a>
+<a href="~/Client/CadastroCliente"> <button class="btn btn-success create">  Criar Novo Cliente  <i class="glyphicon glyphicon-open"></i></button> </a>
 
 <br />
 <br />
-<form>
-    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
-        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
-    </svg>
-    <input type="text" placeholder="Pesquise pelo CPF" />
-    <input type="button" value="Buscar" />
-</form>
+
+<div class="pesquisa">
+    <form>
+        <input class="textpesquisa" type="text" placeholder="Pesquise pelo CPF" />
+        <input type="button" value="Buscar" />
+    </form>
+</div>
+
 <br />
 <br />
 <br />
+
 <table>
     <tr>
         <th> &nbsp;&nbsp;&nbsp; NOME &nbsp;&nbsp;&nbsp;</th>
@@ -33,9 +34,36 @@
         <td>a</td>
         <td>a</td>
         <td>
-            <a href="~/Home/"> <button class="btn btn-danger delete"> <i class="glyphicon glyphicon-trash">EXCLUIR</i> </button> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="~/Home/EditCliente"> <button class="btn btn-primary edit"> <i class="glyphicon glyphicon-edit">EDITAR</i> </button> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button class="btn btn-danger delete" data-toggle="modal" data-target="#modalExcluiCliente"> <i class="glyphicon glyphicon-trash">EXCLUIR</i> </button>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="~/Client/EditCliente"> <button class="btn btn-primary edit"> <i class="glyphicon glyphicon-edit">EDITAR</i> </button> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
     </tr>
 </table>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modalExcluiCliente">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">EXCLUIR CLIENTE</h2>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <p>Deseja excluir o cliente?</p>
+                </form>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="modal-footer">
+                <input type="button" value="Sim" /> &nbsp;&nbsp;&nbsp;
+                <input type="button" value="Não" class="naoExclusao"/>
+            </div>
+        </div>
+    </div>
+</div>
 
