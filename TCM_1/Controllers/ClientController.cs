@@ -6,16 +6,17 @@ using System.Web.Mvc;
 
 namespace TCM_1.Controllers
 {
-    public class FuncController : Controller
+    public class ClientController : Controller
     {
-        public ActionResult CadastroFunc()
+        public ActionResult CadastroCliente()
         {
             return View();
         }
 
-        public ActionResult Funcionario()
+        public ActionResult Cliente()
         {
             return View();
         }
+
     }
 }

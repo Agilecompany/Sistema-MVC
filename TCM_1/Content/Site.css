@@ -228,3 +228,27 @@ button, html input[type="button"], input[type="submit"] {
     border-color: rgb(0,0,0);
     font-size: 125%
 }
+
+.pesquisa{
+    float:right;
+    color:rgb(0,0,0);
+}
+
+.textpesquisa{
+    padding:9px 6px;
+}
+
+#modalExcluiCliente, #modalExcluiForn, #modalExcluiFunc, #modalExcluiUsu {
+    color: rgb(0,0,0);
+}
+
+.naoExclusao {
+    background-color: rgb(150,0,33);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-color: rgb(0,0,0);
+    font-size: 125%
+}
+

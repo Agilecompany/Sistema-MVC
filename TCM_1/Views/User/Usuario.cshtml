@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Usuario";
+}
+
+<h2>USUÁRIOS</h2>
+
+<a href="~/User/CadastroUsu"> <button class="btn btn-success create">  Criar Novo Usuário  <i class="glyphicon glyphicon-open"></i></button> </a>
+
+<br />
+<br />
+
+<div class="pesquisa">
+    <form>
+        <input class="textpesquisa" type="text" placeholder="Pesquise pelo Login" />
+        <input type="button" value="Buscar" />
+    </form>
+</div>
+
+<br />
+<br />
+<br />
+
+<table>
+    <tr>
+        <th> &nbsp;&nbsp;&nbsp; NOME &nbsp;&nbsp;&nbsp;</th>
+        <th> &nbsp;&nbsp;&nbsp; LOGIN &nbsp;&nbsp;&nbsp;</th>
+        <th> &nbsp;&nbsp;&nbsp; EMAIL &nbsp;&nbsp;&nbsp;</th>
+        <th> &nbsp;&nbsp;&nbsp; CARGO &nbsp;&nbsp;&nbsp;</th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+        <td>
+             <button class="btn btn-danger delete" data-toggle="modal" data-target="#modalExcluiUsu"> <i class="glyphicon glyphicon-trash">EXCLUIR</i> </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="~/Home/EditCliente"> <button class="btn btn-primary edit"> <i class="glyphicon glyphicon-edit">EDITAR</i> </button> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+    </tr>
+</table>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modalExcluiUsu">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">EXCLUIR USUÁRIO</h2>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+                    <center>
+                        <h1>Deseja excluir o usuário?</h1>
+                    </center>
+                </form>
+            </div>
+
+            <br />
+            <br />
+
+            <div class="modal-footer">
+                <input type="button" value="Sim" /> &nbsp;&nbsp;&nbsp;
+                <input type="reset" value="Não" class="naoExclusao" />
+            </div>
+        </div>
+    </div>
+</div>
