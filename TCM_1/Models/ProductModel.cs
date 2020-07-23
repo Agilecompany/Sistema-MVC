@@ -7,5 +7,7 @@ namespace TCM_1.Models
 {
     public class ProductModel
     {
+      
+
     }
 }
