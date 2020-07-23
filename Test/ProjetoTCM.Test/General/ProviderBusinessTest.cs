@@ -100,15 +100,23 @@ namespace ProjetoTCM.Test.General
         {
             using (TransactionScope ts = new TransactionScope(TransactionScopeOption.RequiresNew))
             {
-                var provider = new ProviderDomain() {Name = "Distribuidaora", CNPJ = "65986598", Address = "rua 2", Email = "Teste@gmail.com" };
+                var provider = new ProviderDomain() {Name = "Distribuidora", CNPJ = "65986598", Address = "rua 2", Email = "Teste@gmail.com" };
                 var business = new ProviderBusiness();
 
                 business.Save(provider);
 
-                var result = business.GetByID(provider.ID);
+                var provider2 = new ProviderDomain() { Name = "Distribuidora2", CNPJ = "65986598", Address = "rua 2", Email = "Teste2@gmail.com" };
+                var result2 = business.Save(provider2);
 
 
-                Assert.IsNotNull(result.Entity);
+                Assert.AreEqual(result2.Reply, EnumReply.BusinessError);
+
+
+                var provider3 = new ProviderDomain() { Name = "Distribuidora2", CNPJ = "65986597", Address = "rua 2", Email = "Teste@gmail.com" };
+                var result3 = business.Save(provider3);
+
+
+                Assert.AreEqual(result3.Reply, EnumReply.BusinessError);
             }
         }
 

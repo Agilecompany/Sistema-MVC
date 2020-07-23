@@ -37,13 +37,19 @@
             <br />
             <br />
             <br />
-            <input type="button" id="btnConfirmaLogin" value="Entrar" />
+            <input type="submit" id="btnConfirmaLogin" value="Entrar" />
         </div>
 
         <br />
         <br />
         <br />
+        if (Model != null)
+        {
+            @Model.Message;
+        }
 
+        <br />
+        <br />
 
         <a href="~/Salesman/CadastroFunc">Ainda não tem login? Cadastre-se!</a>}
 </center>
