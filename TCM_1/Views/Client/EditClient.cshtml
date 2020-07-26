@@ -33,10 +33,10 @@
         <label>Nome</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.Name, new { name = "Name", placeholder = "Nome", autocomplete = "off" })
-    @*<input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />*@
-    <br />
-    <br />
-</div>
+        @*<input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />*@
+        <br />
+        <br />
+    </div>
     <div>
         <label>CPF</label>
         <br />
@@ -77,23 +77,22 @@
         <br />
         <label>Masculino</label>
         @Html.RadioButtonFor(x => x.Entity.Sex, "Masculino", new { name = "Sex", value = "0" })
-    <label>Feminino</label>
+        <label>Feminino</label>
         @Html.RadioButtonFor(x => x.Entity.Sex, "Feminino", new { name = "Sex", value = "1" })
         @*<input type="radio" name="gender" value="M" /> M &nbsp&nbsp
-        <input type="radio" name="gender" value="F" /> F*@
+            <input type="radio" name="gender" value="F" /> F*@
     </div>
 
 
-if (Model != null)
-{
-    @Model.Message;
-}
-<br />
+    if (Model != null)
+    {
+        @Model.Message;
+    }
+    <br />
 
-<input class="botaoSalvaProduto" type="submit" value="Enviar" />
-<input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />
+    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
 }
-<br />
-<br />
-<a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>
+
+
 
