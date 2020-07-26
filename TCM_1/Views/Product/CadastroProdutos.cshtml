@@ -13,35 +13,45 @@
 
     <label>NOME DO PRODUTO</label>
     <br />
-    <input class="input" type="text" placeholder="Nome do Produto" autocomplete="off" />
+    <input class="input" type="text" name="Name" placeholder="Nome do Produto" autocomplete="off" />
     <br />
     <br />
 
     <label>DESCRIÇÃO DO PRODUTO</label>
     <br />
-    <input class="input" type="text" placeholder="Descrição do Produto" />
+    <input class="input" type="text" name="Description" placeholder="Descrição do Produto" />
     <br />
     <br />
 
     <label>MARCA</label>
     <br />
-    <input class="input" type="text" placeholder="Marca" autocomplete="off" />
+    <input class="input" type="text" name="Brand"placeholder="Marca" autocomplete="off" />
+    <br />
+    <br />
+
+    <label>MODELO</label>
+    <br />
+    <input class="input" type="text" name="Model" placeholder="MODELO" autocomplete="off" />
     <br />
     <br />
 
     <label>PREÇO</label>
     <br />
-    <input class="input" type="text" placeholder="Preço do Produto" />
-    <br />
-    <br />
-
-    <label>ESTOQUE</label>
-    <br />
-    <input class="input" type="number" placeholder="Quantidade em estoque" />
+    <input class="input" type="text"  name="UnitPrice" placeholder="Preço do Produto" />
     <br />
     <br />
 
 
+    <label>CÓDIGO DO PRODUTO</label>
+    <br />
+    <input class="input" type="text" name="ExternalCode" placeholder="Quantidade em estoque" />
+    <br />
+    <br />
+
+    @if (Model != null)
+    {
+        @Model.Message;
+    }
 
     <input class="botaoSalvaProduto" type="submit" value="Salvar" />&nbsp;&nbsp;&nbsp;&nbsp;
     <input class="botaoCancelaProduto" type="reset" value="Cancelar" />

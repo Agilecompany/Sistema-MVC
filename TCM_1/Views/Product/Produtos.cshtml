@@ -1,32 +1,66 @@
-﻿
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<List<ProjetoTCM.Domain.General.ProductDomain>>
 @{
     ViewBag.Title = "Produtos";
+
 }
 
 <h2>PRODUTOS</h2>
 
 <a href="~/Product/CadastroProdutos"> <button class="btn btn-success create">  Criar Novo Poduto  <i class="glyphicon glyphicon-open"></i></button> </a>
 
-<br />
-<br />
+@using (Html.BeginForm("FilterBy", "Product", FormMethod.Post))
+{ 
 
-<table>
-    <tr>
-        <th> &nbsp;&nbsp;&nbsp; NOME &nbsp;&nbsp;&nbsp; </th>
-        <th> &nbsp;&nbsp;&nbsp; Descrição &nbsp;&nbsp;&nbsp; </th>
-        <th> &nbsp;&nbsp;&nbsp; PREÇO &nbsp;&nbsp;&nbsp; </th>
-        <th> &nbsp;&nbsp;&nbsp; ESTOQUE &nbsp;&nbsp;&nbsp; </th>
-        <th></th>
-    </tr>
 
-    <tr>
-        <td>a</td>
-        <td>a</td>
-        <td>a</td>
-        <td>a</td>
-        <td>
-            <a href="~/Home/"> <button class="btn btn-danger delete"> <i class="glyphicon glyphicon-trash">EXCLUIR</i> </button> </a>
-            <a href="~/Home/EditCliente"> <button class="btn btn-primary edit"> <i class="glyphicon glyphicon-edit">EDITAR</i> </button> </a>
-        </td>
-    </tr>
-</table>
+
+    <table class="table">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <p>
+            Digite para buscar: @Html.TextBox("paramFilter")
+            <input type="submit" value="Buscar" />
+        </p>
+       
+        <tr>
+            <th> &nbsp;&nbsp;&nbsp; Nome &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Descrição &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Marca &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Modelo &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Preço &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Codigo &nbsp;&nbsp;&nbsp; </th>
+          
+        </tr>
+        @if (Model == null || Model.Entity == null)
+        {
+            <tr>
+                <td>
+                    Não há registros cadastrados.
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in ((ProjetoTCM.Infrastructure.Common.ObjectReply<List<ProjetoTCM.Domain.General.ProductDomain>>)Model).Entity)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Brand</td>
+                    <td>@item.Model</td>
+                    <td>@item.UnitPrice.ToString("C2")</td>
+                    <td>@item.ExternalCode</td>
+                    <td>
+                         @Html.ActionLink("Excluir", "Delete", new { id = item.ID })
+                         @Html.ActionLink("Editar", "Edit", new { id = item.ID })
+                         
+                    </td>
+                </tr>
+
+
+            }
+        }
+    </table>
+
+}
+

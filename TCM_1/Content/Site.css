@@ -3,6 +3,11 @@
     color: rgb(255,255,255);
 }
 
+input {
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -129,6 +134,7 @@ nav {
 
 a {
     text-decoration: none;
+    color: rgb(0,0,0);
 }
 
 .link {
@@ -209,14 +215,10 @@ a {
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
-a{
-    color:rgb(255,255,255);
-    text-decoration:none;
-}
 
 a:hover {
     text-decoration: none;
-    color: rgb(255,255,255);
+    color: #444444;
 }
 
 button, html input[type="button"], input[type="submit"] {
@@ -250,5 +252,9 @@ button, html input[type="button"], input[type="submit"] {
     padding: 10px 20px;
     border-color: rgb(0,0,0);
     font-size: 125%
+}
+
+ActionLink{
+    color:black;
 }
 

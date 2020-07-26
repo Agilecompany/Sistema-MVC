@@ -1,0 +1,99 @@
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.General.ClientDomain>
+
+@{
+    ViewBag.Title = "Edição de Cliente";
+}
+
+
+<h3>EDIÇÃO DE CLIENTE</h3>
+
+
+<script>
+    function cpf() {
+        var mask = document.getElementById("cpf");
+        if (mask.value.length == 3 || mask.value.length == 7) {
+            mask.value += ".";
+        }
+        else if (mask.value.length == 11) {
+            mask.value += "-";
+        }
+    }
+</script>
+
+
+@using (Html.BeginForm("Update", "Client", FormMethod.Post))
+{
+    <fieldset>
+        <legend class="inicio">Insira os dados do cliente para efetuar o cadastro:</legend>
+    </fieldset>
+
+    @Html.HiddenFor(x => x.Entity.ID)
+
+    <div>
+        <label>Nome</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Name, new { name = "Name", placeholder = "Nome", autocomplete = "off" })
+    @*<input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />*@
+    <br />
+    <br />
+</div>
+    <div>
+        <label>CPF</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.CPF, new { name = "CPF", placeholder = "CPF", autocomplete = "off", onclick = "cpf()" })
+        @*<input class="input" id="cpf" type="text" name="CPF" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />*@
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>Telefone</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Phone, new { name = "Phone", placeholder = "Telefone", autocomplete = "off", maxlength = "11" })
+        @*<input class="input" type="tel" placeholder="Telefone" name="Phone" maxlength="11" />*@
+        <br />
+        <br />
+    </div>
+    <div>
+        <label>Celular</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.CellPhone, new { name = "CellPhone", placeholder = "Celular", autocomplete = "off", maxlength = "11" })
+        @*<input class="input" type="tel" placeholder="Celular" name="CellPhone" maxlength="11" />*@
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>E-E-mail</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Email, new { name = "Email", placeholder = "E-mail", autocomplete = "off" })
+        @*<input class="input" type="text" autocomplete="off" name="Email" placeholder="E-mail" />*@
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>Sexo</label>
+        <br />
+        <label>Masculino</label>
+        @Html.RadioButtonFor(x => x.Entity.Sex, "Masculino", new { name = "Sex", value = "0" })
+    <label>Feminino</label>
+        @Html.RadioButtonFor(x => x.Entity.Sex, "Feminino", new { name = "Sex", value = "1" })
+        @*<input type="radio" name="gender" value="M" /> M &nbsp&nbsp
+        <input type="radio" name="gender" value="F" /> F*@
+    </div>
+
+
+if (Model != null)
+{
+    @Model.Message;
+}
+<br />
+
+<input class="botaoSalvaProduto" type="submit" value="Enviar" />
+<input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+}
+<br />
+<br />
+<a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>
+

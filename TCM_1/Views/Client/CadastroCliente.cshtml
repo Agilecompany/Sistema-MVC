@@ -1,6 +1,7 @@
 ﻿
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+@{
+    ViewBag.Title = "Produtos";
+}
 
 
 <h3>CADASTRO DE CLIENTE</h3>
@@ -18,59 +19,60 @@
     }
 </script>
 
-
-<form id="cadastro">
+<form id="Cliente">
     <fieldset>
         <legend class="inicio">Insira os dados do cliente para efetuar o cadastro:</legend>
     </fieldset>
 
     <div>
-        <label>NOME</label>
+        <label>Nome</label>
         <br />
-        <input class="input" type="text" autocomplete="off" placeholder="Nome" />
-        <br />
-        <br />
-    </div>
-
-    <div>
-        <label>SOBRENOME</label>
-        <br />
-        <input class="input" type="text" autocomplete="off" placeholder="Sobrenome" />
+        <input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />
         <br />
         <br />
     </div>
-
     <div>
         <label>CPF</label>
         <br />
-        <input class="input" id="cpf" type="text" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />
+        <input class="input" id="cpf" type="text" name="CPF" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />
         <br />
         <br />
     </div>
 
     <div>
-        <label>TELEFONE</label>
+        <label>Telefone</label>
         <br />
-        <input class="input" type="tel" placeholder="Celular" maxlength="11" />
+        <input class="input" type="tel" placeholder="Telefone" name="Phone" maxlength="11" />
+        <br />
+        <br />
+    </div>
+    <div>
+        <label>Celular</label>
+        <br />
+        <input class="input" type="tel" placeholder="Celular" name="CellPhone" maxlength="11" />
         <br />
         <br />
     </div>
 
     <div>
-        <label>E-MAIL</label>
+        <label>E-mail</label>
         <br />
-        <input class="input" type="text" autocomplete="off" placeholder="E-mail" />
+        <input class="input" type="text" autocomplete="off" name="Email"placeholder="E-mail" />
         <br />
         <br />
     </div>
 
     <div>
-        <label>SEXO</label>
+        <label>Sexo</label>
         <br />
         <input type="radio" name="gender" value="M" /> M &nbsp&nbsp
-        <input type="radio" name="gender" value="F" /> F
+        <input type="radio" name="Sex" value="F" /> F
     </div>
 
+    @if (Model != null)
+    {
+        @Model.Message;
+    }
     <br />
 
     <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -78,5 +80,5 @@
 
     <br />
     <br />
-    <a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>
+    @*<a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>*@
 </form>

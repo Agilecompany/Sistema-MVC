@@ -5,67 +5,58 @@
 
 <a href="~/Client/CadastroCliente"> <button class="btn btn-success create">  Criar Novo Cliente  <i class="glyphicon glyphicon-open"></i></button> </a>
 
-<br />
-<br />
 
-<div class="pesquisa">
-    <form>
-        <input class="textpesquisa" type="text" placeholder="Pesquise pelo CPF" />
-        <input type="button" value="Buscar" />
-    </form>
-</div>
+@using (Html.BeginForm("FilterBy", "Client", FormMethod.Post))
+{
 
-<br />
-<br />
-<br />
 
-<table>
-    <tr>
-        <th> &nbsp;&nbsp;&nbsp; NOME &nbsp;&nbsp;&nbsp;</th>
-        <th> &nbsp;&nbsp;&nbsp; CPF &nbsp;&nbsp;&nbsp;</th>
-        <th> &nbsp;&nbsp;&nbsp; EMAIL &nbsp;&nbsp;&nbsp;</th>
-        <th> &nbsp;&nbsp;&nbsp; CELULAR &nbsp;&nbsp;&nbsp;</th>
-        <th></th>
-    </tr>
+    <br />
+    <br />
 
-    <tr>
-        <td>a</td>
-        <td>a</td>
-        <td>a</td>
-        <td>a</td>
-        <td>
-             <button class="btn btn-danger delete" data-toggle="modal" data-target="#modalExcluiCliente"> <i class="glyphicon glyphicon-trash">EXCLUIR</i> </button>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="~/Client/EditCliente"> <button class="btn btn-primary edit"> <i class="glyphicon glyphicon-edit">EDITAR</i> </button> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </td>
-    </tr>
-</table>
+    <table class="table">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <p>
+            Digite para buscar: @Html.TextBox("paramFilter")
+            <input type="submit" value="Buscar" />
+        </p>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="modalExcluiCliente">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">EXCLUIR CLIENTE</h2>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span>&times;</span>
-                </button>
-            </div>
+        <tr>
+            <th> &nbsp;&nbsp;&nbsp; Nome &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; CPF &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Sexo &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Email &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Telefone &nbsp;&nbsp;&nbsp; </th>
+            <th> &nbsp;&nbsp;&nbsp; Celular &nbsp;&nbsp;&nbsp; </th>
+            <th></th>
+        </tr>
+        @if (Model == null || Model.Entity == null)
+        {
+            <tr>
+                <td>
+                    Não há registros cadastrados.
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in ((ProjetoTCM.Infrastructure.Common.ObjectReply<List<ProjetoTCM.Domain.General.ClientDomain>>)Model).Entity)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.CPF</td>
+                    <td>@item.Sex</td>
+                    <td>@item.Email</td>
+                    <td>@item.Phone</td>
+                    <td>@item.CellPhone</td>
+                    <td>
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.ID })
+                        @Html.ActionLink("Editar", "Edit", new { id = item.ID })
 
-            <div class="modal-body">
-                <form>
-                    <center>
-                        <h1>Deseja excluir o cliente?</h1>
-                    </center>
-                </form>
-            </div>
-
-            <br />
-            <br />
-
-            <div class="modal-footer">
-                <input type="button" value="Sim" /> &nbsp;&nbsp;&nbsp;
-                <input type="reset" value="Não" class="naoExclusao"/>
-            </div>
-        </div>
-    </div>
-</div>
-
+                    </td>
+                </tr>
+            }
+        }
+    </table>
+}
