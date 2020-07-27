@@ -1,4 +1,4 @@
-﻿
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.General.SalesmanDomain>
 @{
     ViewBag.Title = "CadastroFunc";
 }
@@ -18,7 +18,8 @@
 </script>
 
 
-<form id="cadastro">
+@using (Html.BeginForm("CadastroFunc", "Salesman", FormMethod.Post))
+{
     <fieldset>
         <legend class="inicio">Insira seus dados para efetuar o cadastro:</legend>
     </fieldset>
@@ -26,7 +27,7 @@
     <div>
         <label>NOME</label>
         <br />
-        <input class="input" type="text" placeholder="Nome" />
+        <input class="input" type="text" name="name" placeholder="Nome" />
         <br />
         <br />
     </div>
@@ -34,7 +35,7 @@
     <div>
         <label>TELEFONE</label>
         <br />
-        <input class="input" type="tel" placeholder="Telefone" autocomplete="off" />
+        <input class="input" type="tel"  name="Phone" placeholder="Telefone" autocomplete="off" />
         <br />
         <br />
     </div>
@@ -42,7 +43,7 @@
     <div>
         <label>ENDEREÇO</label>
         <br />
-        <input class="input" type="text" placeholder="Endereço" autocomplete="off" />
+        <input class="input" type="text" name="Address" placeholder="Endereço" autocomplete="off" />
         <br />
         <br />
     </div>
@@ -50,7 +51,7 @@
     <div>
         <label>CPF</label>
         <br />
-        <input class="input" id="cpf" type="text" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />
+        <input class="input" id="cpf" type="text" name="CPF" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />
         <br />
         <br />
     </div>
@@ -58,24 +59,31 @@
     <div>
         <label>E-MAIL</label>
         <br />
-        <input class="input" type="text" placeholder="E-mail" />
+        <input class="input" type="text" name="Email" placeholder="E-mail" />
         <br />
         <br />
     </div>
 
     <div>
-        <label>SEXO</label>
+        <label>Sexo</label>
         <br />
-        <input type="radio" name="gender" value="M" /> M &nbsp;&nbsp;
-        <input type="radio" name="gender" value="F" /> F
+        <label>Masculino</label>
+        <input type="radio" name="Sex" value="0" />
+        <label>Feminino</label>
+        <input type="radio" name="Sex" value="1" />
     </div>
 
+    if (Model != null)
+    {
+        @Model.Message;
+    }
     <br />
 
-    <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
-    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />
+
+    <a href="~/Salesman/funcionario"> <input type="button" class="voltar botaoCancelaFuncionario" value="Voltar" /> </a>
 
     <br />
     <br />
 
-</form>
+}

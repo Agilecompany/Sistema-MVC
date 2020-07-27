@@ -10,7 +10,14 @@ using TCM_1.Models;
 namespace TCM_1.Controllers
 {
     public class SalesmanController : Controller
+
     {
+        public ActionResult AbrirCadastroFuncionario()
+        {
+            return View("CadastroFunc");
+        }
+
+
         public ActionResult CadastroFunc(SalesmanModel salesmanModel)
         {
             var result = new SalesmanBusiness().Save(salesmanModel.ConvertToDomain());
@@ -44,21 +51,21 @@ namespace TCM_1.Controllers
                                                 
 
 
-            return View("Vendedor", result);
+            return View("Funcionario", result);
         }
 
         public ActionResult Delete(long id)
         {
             var result = new SalesmanBusiness().Delete(id);
 
-            return View("Salesman");
+            return View("Funcionario");
         }
 
         public ActionResult Edit(long id)
         {
             var result = new SalesmanBusiness().GetByID(id);
 
-            return View("Salesman", result);
+            return View("Funcionario", result);
         }
     }
 }
