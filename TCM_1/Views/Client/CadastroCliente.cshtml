@@ -1,6 +1,7 @@
-﻿
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.General.ClientDomain>
+
 @{
-    ViewBag.Title = "Produtos";
+    ViewBag.Title = "Cadastro de Cliente";
 }
 
 
@@ -19,7 +20,9 @@
     }
 </script>
 
-<form id="Cliente">
+@using (Html.BeginForm("CadastroCliente", "Client", FormMethod.Post))
+{
+
     <fieldset>
         <legend class="inicio">Insira os dados do cliente para efetuar o cadastro:</legend>
     </fieldset>
@@ -57,7 +60,7 @@
     <div>
         <label>E-mail</label>
         <br />
-        <input class="input" type="text" autocomplete="off" name="Email"placeholder="E-mail" />
+        <input class="input" type="text" autocomplete="off" name="Email" placeholder="E-mail" />
         <br />
         <br />
     </div>
@@ -65,20 +68,22 @@
     <div>
         <label>Sexo</label>
         <br />
-        <input type="radio" name="gender" value="M" /> M &nbsp&nbsp
-        <input type="radio" name="Sex" value="F" /> F
+        <label>Masculino</label>
+        <input type="radio" name="Sex" value="0" />
+        <label>Feminino</label>
+        <input type="radio" name="Sex" value="1" />
     </div>
 
-    @if (Model != null)
+    if (Model != null)
     {
         @Model.Message;
     }
     <br />
 
-    <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
-    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />
+    <a href="~/Client/Cliente"> <input type="button" class="voltar botaoCancelaProduto" value="Voltar" /> </a>
 
     <br />
     <br />
     @*<a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>*@
-</form>
+}

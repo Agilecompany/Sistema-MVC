@@ -1,6 +1,6 @@
 ﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.General.ProductDomain>
 @{
-    ViewBag.Title = "Produtos";
+    ViewBag.Title = "Edição do Produtos";
 }
 
 <h2>EDIÇÃO DE PRODUTO</h2>
@@ -63,7 +63,7 @@
         <label>CÓDIGO DO PRODUTO</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.ExternalCode, new { name = "ExternalCode", placeholder = "Quantidade em estoque" })
-        <input class="input" type="text" name="ExternalCode" placeholder="Quantidade em estoque" />
+        @*<input class="input" type="text" name="ExternalCode" placeholder="Quantidade em estoque" />*@
         <br />
         <br />
     </div>

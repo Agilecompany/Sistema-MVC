@@ -25,7 +25,7 @@ namespace TCM_1.Controllers
 
         public ActionResult Produtos()
         {
-            var result = new ProductBusiness().GetAll();
+              var result = new ProductBusiness().GetAll();
 
             return View(result);
         }

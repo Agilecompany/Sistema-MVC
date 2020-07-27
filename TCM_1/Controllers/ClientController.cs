@@ -12,6 +12,11 @@ namespace TCM_1.Controllers
 {
     public class ClientController : Controller
     {
+        public ActionResult AbrirCadastroCliente()
+        {
+            return View("CadastroCliente");
+        }
+
         public ActionResult CadastroCliente(ClientModel clientModel)
         {
             var result = new ClientBusiness().Save(clientModel.ConvertToDomain());
@@ -65,7 +70,9 @@ namespace TCM_1.Controllers
         {
             var result = new ClientBusiness().Delete(id);
 
-            return View("Cliente");
+            var resultAll = new ClientBusiness().GetAll();
+
+            return View("Cliente", resultAll);
         }
 
         public ActionResult Edit(long id)

@@ -3,6 +3,10 @@
     color: rgb(255,255,255);
 }
 
+.voltar {
+    background-color: darkred !important;
+}
+
 input {
     background-color: rgb(255,255,255);
     color: rgb(0,0,0);
@@ -257,4 +261,5 @@ button, html input[type="button"], input[type="submit"] {
 ActionLink{
     color:black;
 }
+
 

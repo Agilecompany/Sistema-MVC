@@ -44,7 +44,21 @@ namespace TCM_1.Controllers
                                                 
 
 
-            return View("Fornecedor", result);
+            return View("Vendedor", result);
+        }
+
+        public ActionResult Delete(long id)
+        {
+            var result = new SalesmanBusiness().Delete(id);
+
+            return View("Salesman");
+        }
+
+        public ActionResult Edit(long id)
+        {
+            var result = new SalesmanBusiness().GetByID(id);
+
+            return View("Salesman", result);
         }
     }
 }
