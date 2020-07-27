@@ -1,4 +1,4 @@
-﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<List<ProjetoTCM.Domain.General.ProductDomain>>
+﻿
 @{
     ViewBag.Title = "Produtos";
 
@@ -6,7 +6,7 @@
 
 <h2>PRODUTOS</h2>
 
-<a href="~/Product/CadastroProdutos"> <button class="btn btn-success create">  Criar Novo Poduto  <i class="glyphicon glyphicon-open"></i></button> </a>
+<a href="~/Product/AbrirCadastroProdutos"> <button class="btn btn-success create">  Criar Novo Poduto  <i class="glyphicon glyphicon-open"></i></button> </a>
 
 @using (Html.BeginForm("FilterBy", "Product", FormMethod.Post))
 { 
@@ -26,7 +26,7 @@
             <th> &nbsp;&nbsp;&nbsp; Modelo &nbsp;&nbsp;&nbsp; </th>
             <th> &nbsp;&nbsp;&nbsp; Preço &nbsp;&nbsp;&nbsp; </th>
             <th> &nbsp;&nbsp;&nbsp; Codigo &nbsp;&nbsp;&nbsp; </th>
-          
+            <th>Opções</th>
         </tr>
         @if (Model == null || Model.Entity == null)
         {

@@ -11,6 +11,11 @@ namespace TCM_1.Controllers
 {
     public class ProductController : Controller
     {
+        public ActionResult AbrirCadastroProdutos()
+        {
+            return View("CadastroProdutos");
+        }
+
         public ActionResult CadastroProdutos(ProductModel productModel)
         {
             var result = new ProductBusiness().Save(productModel.ConvertToDomain());
@@ -22,6 +27,7 @@ namespace TCM_1.Controllers
 
             return View(result);
         }
+
 
         public ActionResult Produtos()
         {

@@ -1,12 +1,12 @@
-﻿
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.General.ProductDomain>
 @{
     ViewBag.Title = "Produtos";
 }
 
 <h2>PRODUTOS</h2>
 
-
-<form id="produto">
+@using (Html.BeginForm("CadastroProdutos", "Product", FormMethod.Post))
+{
     <fieldset>
         <legend class="inicio">Adicionar novo produto:</legend>
     </fieldset>
@@ -25,7 +25,7 @@
 
     <label>MARCA</label>
     <br />
-    <input class="input" type="text" name="Brand"placeholder="Marca" autocomplete="off" />
+    <input class="input" type="text" name="Brand" placeholder="Marca" autocomplete="off" />
     <br />
     <br />
 
@@ -37,22 +37,22 @@
 
     <label>PREÇO</label>
     <br />
-    <input class="input" type="text"  name="UnitPrice" placeholder="Preço do Produto" />
+    <input class="input" type="text" name="UnitPrice" placeholder="Preço do Produto" />
     <br />
     <br />
 
 
     <label>CÓDIGO DO PRODUTO</label>
     <br />
-    <input class="input" type="text" name="ExternalCode" placeholder="Quantidade em estoque" />
+    <input class="input" type="text" name="ExternalCode" placeholder="Código do produto" />
     <br />
     <br />
 
-    @if (Model != null)
+    if (Model != null)
     {
         @Model.Message;
     }
 
-    <input class="botaoSalvaProduto" type="submit" value="Salvar" />&nbsp;&nbsp;&nbsp;&nbsp;
-    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
-</form>
+    <input class="botaoSalvaProduto" type="submit" value="Salvar" />
+    <a href="~/Product/Produtos"> <input type="button" class="voltar botaoCancelaProduto" value="Voltar" /> </a>
+}
