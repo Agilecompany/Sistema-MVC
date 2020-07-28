@@ -3,7 +3,7 @@
     ViewBag.Title = "Funcionario";
 }
 
-<h2>FUNCIONÁRIOS</h2>
+<h2>Funcionários</h2>
 
 <a href="~/Salesman/AbrirCadastroFuncionario"> <button class="btn btn-success create">  Criar Novo Funcionário  <i class="glyphicon glyphicon-open"></i></button> </a>
 
@@ -45,10 +45,10 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>@item.CPF</td>
-                    <td>@item.Sex</td>
-                    <td>@item.Email</td>
-                    <td>@item.Phone</td>
                     <td>@item.Address</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Email</td>
+                    <td>@item.Sex</td>
                     <td>
                         @Html.ActionLink("Excluir", "Delete", new { id = item.ID })
                         @Html.ActionLink("Editar", "Edit", new { id = item.ID })

@@ -1,11 +1,16 @@
-﻿
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.Security.UserDomain>
 @{
     ViewBag.Title = "CadastroUsu";
 }
 
-<h2>CADASTRO DE USUÁRIO</h2>
+<h2>Cadastro de Usuários</h2>
 
-<form id="cadastro">
+
+
+
+
+@using (Html.BeginForm("CadastroUsu", "User", FormMethod.Post))
+{
     <fieldset>
         <legend class="inicio">Insira seus dados para efetuar o cadastro:</legend>
     </fieldset>
@@ -13,7 +18,7 @@
     <div>
         <label>NOME</label>
         <br />
-        <input class="input" type="text" placeholder="Nome" />
+        <input class="input" name="Name" type="text" placeholder="Nome" />
         <br />
         <br />
     </div>
@@ -21,7 +26,7 @@
     <div>
         <label>LOGIN</label>
         <br />
-        <input class="input" type="text" placeholder="Login" />
+        <input class="input" type="text" name="Login" placeholder="Login" />
         <br />
         <br />
     </div>
@@ -29,7 +34,7 @@
     <div>
         <label>E-MAIL</label>
         <br />
-        <input class="input" type="text" placeholder="E-mail" />
+        <input class="input" type="text" name="Email" placeholder="E-mail" />
         <br />
         <br />
     </div>
@@ -37,37 +42,28 @@
     <div>
         <label>SENHA</label>
         <br />
-        <input class="input" type="password" placeholder="Senha" />
+        <input class="input" type="password" name="Password" placeholder="Senha" />
         <br />
         <br />
     </div>
 
-    <div>
-        <label>CONFIRME A SENHA</label>
-        <br />
-        <input class="input" type="password" placeholder="Confirme a senha" />
-        <br />
-        <br />
-    </div>
 
     <label>CARGO</label>
     <br />
-    <select>
-        <option>Caixa</option>
-        <option>Administrativo</option>
-    </select>
+    <input class="input" type="text" name="Porfile" placeholder="Porfile" />
 
-    <br />
-    <br />
-    <br />
+    if (Model != null)
+    {
+        @Model.Message;
+    }
 
-    <input class="botaoSalvaProduto" type="submit" value="Enviar" />&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />
     <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
 
     <br />
     <br />
 
-    @*<a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>*@
+    <a href="~/Home/Login">Ja tem cadastro? Faça seu login!</a>
 
-</form>
+}
 

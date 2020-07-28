@@ -12,13 +12,19 @@ namespace TCM_1.Controllers
 {
     public class UserController : Controller
     {
+
+        public ActionResult AbrirCadastroUsu()
+        {
+            return View("CadastroUsu");
+        }
+
         public ActionResult CadastroUsu(UserModel userModel)
         {
             var result = new UserBusiness().Save(userModel.ConvertToDomain());
 
             if (result.Reply == EnumReply.Success)
             {
-                return RedirectToAction("User");
+                return RedirectToAction("Usuario");
             }
 
             return View(result);
@@ -39,16 +45,11 @@ namespace TCM_1.Controllers
 
         public ActionResult Usuario()
         {
-            return View();
-        }
-
-        public ActionResult User()
-        {
             var result = new UserBusiness().GetAll();
-
             return View(result);
         }
 
+     
 
         public ActionResult FilterBy(string paramFilter)
         {
@@ -62,14 +63,16 @@ namespace TCM_1.Controllers
                                                 || x.Profile.ToString().Contains(paramFilter));
 
 
-            return View("User", result);
+            return View("Usuario", result);
         }
 
         public ActionResult Delete(long id)
         {
             var result = new UserBusiness().Delete(id);
 
-            return View("User");
+            var resultAll = new UserBusiness().GetAll();
+
+            return View("Usuario", resultAll);
         }
 
         public ActionResult Edit(long id)

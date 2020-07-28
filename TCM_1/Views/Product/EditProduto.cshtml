@@ -3,9 +3,9 @@
     ViewBag.Title = "Edição do Produtos";
 }
 
-<h2>EDIÇÃO DE PRODUTO</h2>
+<h2>Edição de Produtos</h2>
 
-@using (Html.BeginForm("Update", "Client", FormMethod.Post))
+@using (Html.BeginForm("Update", "Product", FormMethod.Post))
 {
 
     <fieldset>
@@ -17,7 +17,6 @@
         <label>Nome</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.Name, new { name = "Name", placeholder = "Nome do Produto", autocomplete = "off" })
-        @*<input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />*@
         <br />
         <br />
     </div>
@@ -26,7 +25,7 @@
         <label>DESCRIÇÃO DO PRODUTO</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.Description, new { name = "Description", placeholder = "Descrição do Produto" })
-        @*<input class="input" type="text" name="Description" placeholder="Descrição do Produto" />*@
+
         <br />
         <br />
     </div>
@@ -35,7 +34,7 @@
         <label>MARCA</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.Brand, new { name = "Brand", placeholder = "Marca do Produto", autocomplete = "off" })
-        @*<input class="input" type="text" name="Brand" placeholder="Marca" autocomplete="off" />*@
+
         <br />
         <br />
     </div>
@@ -44,7 +43,7 @@
         <label>MODELO</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.Model, new { name = "Model", placeholder = "MODELO do Produto", autocomplete = "off" })
-        @*<input class="input" type="text" name="Model" placeholder="MODELO" autocomplete="off" />*@
+
         <br />
         <br />
     </div>
@@ -53,21 +52,19 @@
         <label>PREÇO</label>
         <br />
         @Html.TextBoxFor(x => x.Entity.UnitPrice, new { name = "UnitPrice", placeholder = "Preço do Produto" })
-        @*<input class="input" type="text" name="UnitPrice" placeholder="Preço do Produto" /*@>
+
         <br />
         <br />
     </div>
-
-
     <div>
         <label>CÓDIGO DO PRODUTO</label>
         <br />
-        @Html.TextBoxFor(x => x.Entity.ExternalCode, new { name = "ExternalCode", placeholder = "Quantidade em estoque" })
-        @*<input class="input" type="text" name="ExternalCode" placeholder="Quantidade em estoque" />*@
+        @Html.TextBoxFor(x => x.Entity.ExternalCode, new { name = "ExternalCode", placeholder = "Codigo do produto" })
+
         <br />
         <br />
     </div>
- 
+
 
     if (Model != null)
     {
@@ -75,5 +72,5 @@
     }
 
     <input class="botaoSalvaProduto" type="submit" value="Salvar" />
-    <input class="botaoCancelaProduto" type="reset" value="Cancelar" />
+    <a href="~/Product/Produto"> <input type="button" class="voltar botaoCancelaProduto" value="Voltar" /> </a>
 }

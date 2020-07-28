@@ -1,17 +1,13 @@
 ﻿
 @{ ViewBag.Title = "Cliente"; }
 
-<h2>CLIENTES</h2>
+<h2>Clientes</h2>
 
 <a href="~/Client/AbrirCadastroCliente"> <button class="btn btn-success create">  Criar Novo Cliente  <i class="glyphicon glyphicon-open"></i></button> </a>
 
 
 @using (Html.BeginForm("FilterBy", "Client", FormMethod.Post))
 {
-
-
-
-
     <table class="table">
         <p>
             Digite para buscar: @Html.TextBox("paramFilter")

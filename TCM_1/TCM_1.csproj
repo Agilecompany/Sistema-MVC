@@ -247,6 +247,7 @@
     <Content Include="Views\Home\LoginEnter.cshtml" />
     <Content Include="Views\Client\EditClient.cshtml" />
     <Content Include="Views\Product\EditProduto.cshtml" />
+    <Content Include="Views\User\EditUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

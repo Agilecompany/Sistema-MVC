@@ -23,4 +23,6 @@ namespace ProjetoTCM.Domain.Security
 
         public bool Excluded { get; set; }
     }
+
+
 }

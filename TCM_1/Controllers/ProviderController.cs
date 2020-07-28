@@ -11,6 +11,12 @@ namespace TCM_1.Controllers
 {
     public class ProviderController : Controller
     {
+
+        public ActionResult AbrirCadastroFornecedor()
+        {
+
+            return View("CadastroForn");
+        }
         public ActionResult CadastroForn( ProviderModel providerModel)
         {
 
@@ -25,10 +31,13 @@ namespace TCM_1.Controllers
            
         }
 
+       
+
         public ActionResult Fornecedor()
         {
             var result = new ProviderBusiness().GetAll();
-            return View();
+
+            return View(result);
         }
 
         public ActionResult FilterBy(string paramFilter)

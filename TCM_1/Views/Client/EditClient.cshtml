@@ -5,7 +5,7 @@
 }
 
 
-<h3>EDIÇÃO DE CLIENTE</h3>
+<h3>Edição de Clientes</h3>
 
 
 <script>
@@ -23,9 +23,7 @@
 
 @using (Html.BeginForm("Update", "Client", FormMethod.Post))
 {
-    <fieldset>
-        <legend class="inicio">Insira os dados do cliente para efetuar o cadastro:</legend>
-    </fieldset>
+    
 
     @Html.HiddenFor(x => x.Entity.ID)
 

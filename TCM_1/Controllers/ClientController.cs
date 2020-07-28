@@ -14,6 +14,7 @@ namespace TCM_1.Controllers
     {
         public ActionResult AbrirCadastroCliente()
         {
+            
             return View("CadastroCliente");
         }
 

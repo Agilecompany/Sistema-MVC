@@ -34,7 +34,7 @@ namespace TCM_1.Controllers
         public ActionResult Funcionario()
         {
             var result = new SalesmanBusiness().GetAll();
-            return View();
+            return View(result);
         }
 
         public ActionResult FilterBy(string paramFilter)

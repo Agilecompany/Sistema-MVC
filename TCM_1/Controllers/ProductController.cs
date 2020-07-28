@@ -1,4 +1,5 @@
 ﻿using ProjetoTCM.Business.General;
+using ProjetoTCM.Infrastructure.Common;
 using ProjetoTCM.Infrastructure.Common.Enum;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,19 @@ namespace TCM_1.Controllers
             var result = new ProductBusiness().GetByID(id);
 
             return View("CadastroProdutos", result);
+        }
+
+        public ActionResult Update(ObjectReply<ProductModel> productModel)
+        {
+            var result = new ProductBusiness().Save(productModel.Entity.ConvertToDomain());
+
+            if (result.Reply == EnumReply.Success)
+            {
+                return RedirectToAction("Produtos");
+            }
+
+            return View("EditProduto", result);
+
         }
     }
 }

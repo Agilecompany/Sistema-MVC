@@ -1,0 +1,72 @@
+﻿@model ProjetoTCM.Infrastructure.Common.ObjectReply<ProjetoTCM.Domain.Security.UserDomain>
+
+@{
+    ViewBag.Title = "Edição de Usuários";
+}
+
+
+<h3>Edição de Usuários</h3>
+
+
+
+
+@using (Html.BeginForm("Update", "User", FormMethod.Post))
+{
+
+
+    @Html.HiddenFor(x => x.Entity.ID)
+
+    <div>
+        <label>Nome</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Name, new { name = "Name", placeholder = "Nome", autocomplete = "off" })
+        @*<input class="input" type="text" name="Name" autocomplete="off" placeholder="Nome" />*@
+        <br />
+        <br />
+    </div>
+    <div>
+        <label>Login</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Login, new { name = "Login", placeholder = "Login", autocomplete = "off", onclick = "cpf()" })
+        @*<input class="input" id="cpf" type="text" name="CPF" autocomplete="off" placeholder="CPF" maxlength="14" onclick="cpf()" />*@
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Email, new { name = "Email", placeholder = "Email", autocomplete = "off", maxlength = "11" })
+        @*<input class="input" type="tel" placeholder="Telefone" name="Phone" maxlength="11" />*@
+        <br />
+        <br />
+    </div>
+    <div>
+        <label>Senha</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Password, new { name = "Password", placeholder = "Password", autocomplete = "off", maxlength = "11" })
+        @*<input class="input" type="tel" placeholder="Celular" name="CellPhone" maxlength="11" />*@
+        <br />
+        <br />
+    </div>
+
+    <div>
+        <label>Perfil</label>
+        <br />
+        @Html.TextBoxFor(x => x.Entity.Email, new { name = "Profile", placeholder = "E-Profile", autocomplete = "off" })
+        @*<input class="input" type="text" autocomplete="off" name="Email" placeholder="E-mail" />*@
+        <br />
+        <br />
+    </div>
+
+    if (Model != null)
+    {
+        @Model.Message;
+    }
+    <br />
+
+    <input class="botaoSalvaProduto" type="submit" value="Enviar" />
+    <a href="~/User/Usuario"> <input type="button" class="voltar botaoCancelaProduto" value="Voltar" /> </a>
+
+}
+
